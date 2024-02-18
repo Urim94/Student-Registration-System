@@ -24,3 +24,51 @@
         </div>
     </body>
 </html>
+body {
+    margin: 10px;
+    font-family: Arial, sans-serif; /* Optional: Setting a specific font-family */
+}
+
+.container {
+    margin: 0px;
+}
+
+.section {
+    float: left;
+    width: calc(33.3333% - 20px); /* 20px accounts for margin between sections */
+    background-color: #f2f2f2; /* Example background color */
+    border: 1px solid black;
+    box-sizing: border-box;
+    margin: 10px; /* Spacing between sections */
+    position: relative;
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px;
+    margin: 0;
+    border: 1px solid black;
+    font-size: 125%; /* Optional: 25% larger font size than dummy text */
+}
+.dummy-text {
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px; /* Example font size */
+}@media(max-width: 767px) {
+    .section {
+        width: calc(100% - 20px);
+        clear: both;
+    }
+}
+
+@media (min-width: 767px) and (max-width: 991px) {
+    .section {
+        width: calc(50% - 20px); /* 20px accounts for margin between sections */
+        float: left;
+    }
+    .section:nth-child(3) {
+        width: calc(100% - 20px);
+    }
+}
